@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Weather Result</title>
+<<<<<<< HEAD
 </head>
 <body>
     <h1>Weather Result</h1>
@@ -14,3 +15,42 @@
     <a href="/">Back to search</a>
 </body>
 </html>
+=======
+    <style>
+        body {
+            background-image: url('https://wallpapers.com/images/featured-full/weather-xqhs9axpy8btfd3y.jpg'); 
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif; 
+            color: #fff; 
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Result</h1>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% else %}
+            <img src="http://openweathermap.org/img/wn/{{ icon_code }}.png" alt="Weather Icon">
+            <p>The weather in {{ city }} is: {{ weather }}</p>
+            <p>The temperature in {{ city }} is: {{ temp }}°F</p>
+        {% endif %}
+        <a href="/">Back to search</a>
+    </div>
+</body>
+</html>
+
+>>>>>>> 7eeb6ca (adding picture)

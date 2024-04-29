@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 32px; /* Adjust the font size */
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow */
+    background-color: #007bff; /* Background color */
+    padding: 10px; /* Add padding for better readability */
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    font-size: 16px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#weather {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.weather-icon {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image round */
+    border: 2px solid #fff; /* Add a white border */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
