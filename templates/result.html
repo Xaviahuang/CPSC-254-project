@@ -8,7 +8,7 @@
     <style>
         body {
             background-image: url('https://wallpapers.com/images/featured-full/weather-xqhs9axpy8btfd3y.jpg'); 
-            background-size: cover;
+            background-size: initial;
             background-position: center;
             font-family: Arial, sans-serif; 
             color: #fff; 
@@ -16,7 +16,7 @@
             padding: 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 400px;
             margin: 0 auto;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.2); 
@@ -29,13 +29,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Weather Result</h1>
+        <h1>{{city}}</h1>
         {% if error %}
             <p>{{ error }}</p>
         {% else %}
             <img src="http://openweathermap.org/img/wn/{{ icon_code }}.png" alt="Weather Icon">
-            <p>The weather in {{ city }} is: {{ weather }}</p>
-            <p>The temperature in {{ city }} is: {{ temp }}°F</p>
+            <p>{{ weather }}</p>
+            <p>{{ temp }}°F</p>
         {% endif %}
         <a href="/">Back to search</a>
     </div>
