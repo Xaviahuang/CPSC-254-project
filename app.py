@@ -9,7 +9,7 @@ def index():
         city = request.form['city']
         weather_info = get_weather(city)
         if weather_info:
-            return render_template('result.html', city=city, weather=weather_info['weather'], temp=weather_info['temp'], icon_code=weather_info['icon_code'])
+            return render_template('result.html', city=city, weather=weather_info['weather'], temp=weather_info['temp'],description= weather_info['description'], icon_code=weather_info['icon_code'])
         else:
             return render_template('result.html', city=city, error='City not found')
     return render_template('index.html')

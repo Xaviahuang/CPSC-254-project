@@ -11,7 +11,8 @@ def get_weather(city):
     else:
         weather = weather_data.json()['weather'][0]['main']
         temp = round(weather_data.json()['main']['temp'])
+        description = weather_data.json()['weather'][0]['description']
         icon_code = weather_data.json()['weather'][0]['icon']
-        return {'weather': weather, 'temp': temp, 'icon_code': icon_code}
+        return {'weather': weather, 'temp': temp, 'description': description,'icon_code': icon_code }
 
 

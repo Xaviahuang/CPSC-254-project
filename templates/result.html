@@ -8,23 +8,26 @@
     <style>
         body {
             background-image: url('https://wallpapers.com/images/featured-full/weather-xqhs9axpy8btfd3y.jpg'); 
-            background-size: initial;
+            background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif; 
             color: #fff; 
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 500px;
+            padding: 50px;
             background-color: rgba(0, 0, 0, 0.2); 
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
             text-align: center;
         }
-
     </style>
 </head>
 <body>
@@ -34,8 +37,10 @@
             <p>{{ error }}</p>
         {% else %}
             <img src="http://openweathermap.org/img/wn/{{ icon_code }}.png" alt="Weather Icon">
-            <p>{{ weather }}</p>
-            <p>{{ temp }}°F</p>
+            <p style="font-size: 1.275em">Weather: {{ weather }}</p>
+            <p style="font-size: 1.275em">Temperature: {{ temp }}°F</p>
+            <p style="font-size: 1.275em">Description : {{ description }} </p>
+            
         {% endif %}
         <a href="/">Back to search</a>
     </div>
